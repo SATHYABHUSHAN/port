@@ -1,0 +1,244 @@
+/* General Styling */
+body, h1, h2, p {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 60px;
+    overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f62424;
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #007acc;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in.show {
+    opacity: 1;
+}
+
+.slide-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Card Styling */
+.skills-container, .project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-card, .project-card, .internship-card {
+    background-color: #f67979;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover, .skill-card:hover, .internship-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Hero Section */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.profile-image {
+    border-radius: 70%;
+    width: 250px;
+    height: 250px;
+    transition: transform 0.6s ease;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+}
+
+/* Animations */
+.slide-left {
+    transform: translateX(-50px);
+}
+
+.slide-right {
+    transform: translateX(50px);
+}
+/* Animation Styles */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Apply Animations */
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.slide-up {
+    animation: slideUp 1.5s ease-in-out;
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+/* Navbar hover effect */
+.navbar a:hover {
+    animation: bounce 0.5s;
+}
+
+/* Cards hover grow effect */
+.skill-card:hover,
+.project-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+/* Footer Styling */
+.footer {
+    background-color: #f62424;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.footer .contact-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.footer strong {
+    color: #000; /* Makes the strong tags stand out */
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+    color: #000;
+}
+/* Achievements and Volunteering Section */
+#achievements {
+    padding: 40px 20px;
+    background-color: #f67979;
+    color: #333;
+    text-align: left;
+    margin-top: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+#achievements h2 {
+    font-size: 1.8rem;
+    color:  #000;
+    margin-bottom: 15px;
+}
+
+.achievements-list,
+.volunteering-list {
+    list-style-type: disc;
+    margin: 10px 0 0 20px;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.achievements-list li,
+.volunteering-list li {
+    margin-bottom: 10px;
+}
+
+.volunteering-list strong {
+    color:#000;
+    font-weight: bold;
+}
+/* Apply text justification */
+.justify-text {
+    text-align: justify;
+}
